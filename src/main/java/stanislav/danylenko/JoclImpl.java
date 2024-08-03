@@ -131,11 +131,6 @@ public class JoclImpl {
         CL.clReleaseMemObject(memObjects[1]);
         CL.clReleaseMemObject(memObjects[2]);
 
-        double res = 0;
-        for (double val : result) {
-            res += val;
-        }
-
         long finish = System.nanoTime();
         System.out.println("   Jocl run [single] time: " + (finish - start));
     }
@@ -189,11 +184,6 @@ public class JoclImpl {
             CL.clReleaseMemObject(memObjects[0]);
             CL.clReleaseMemObject(memObjects[1]);
             CL.clReleaseMemObject(memObjects[2]);
-
-            double res = 0;
-            for (double val : result) {
-                res += val;
-            }
         }
 
         long finish = System.nanoTime();
@@ -249,11 +239,6 @@ public class JoclImpl {
             CL.clReleaseMemObject(memObjects[0]);
             CL.clReleaseMemObject(memObjects[1]);
             CL.clReleaseMemObject(memObjects[2]);
-
-            double res = 0;
-            for (double value : result) {
-                res += value;
-            }
         });
 
         long finish = System.nanoTime();
